@@ -21,8 +21,8 @@ const Fonts = ({valueSlider, text}) => {
       })
       .then((response) => {
         if (!response.ok) {
-          throw new Error(
-            `Nous n'avons pas pu lire les registres des planètes, status : ${response.status}`
+          throw new error(
+            `Nous n'avons pas pu lire le registres, status : ${response.status}`
           );
         }
         return response.json();
@@ -41,6 +41,8 @@ const Fonts = ({valueSlider, text}) => {
 
   return (
     <div className="col-lg-9">
+      {loading && <p className="text-center">loading...</p>}
+      {!!error && <p className="alert alert-danger">{error}</p>}
       <section className="row mb-5">
         <h2 className="mb-3"><span className="badge bg-danger"></span></h2>
         <article className="col-lg-6 mb-4">
