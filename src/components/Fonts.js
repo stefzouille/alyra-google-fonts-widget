@@ -35,13 +35,8 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
         console.error(error.message);
         setError(error.message);
         setLoading(false);
-<<<<<<< HEAD
       });
   }, []);
-=======
-      })
-  }, [error])
->>>>>>> 8feaf536a1bd21971d5041c902c3f263a201eba7
 
   return (
     <div className="col-lg-9">
