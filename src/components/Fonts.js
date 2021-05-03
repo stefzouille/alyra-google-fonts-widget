@@ -21,7 +21,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
       .then((response) => {
         if (!response.ok) {
           throw new Error(
-            `Nous n'avons pas pu lire les registres des planètes, status : ${response.status}`
+            `Nous n'avons pas pu lire le registre , status : ${response.status}`
           );
         }
         return response.json();
@@ -40,6 +40,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
 
   return (
     <div className="col-lg-9">
+
       <section className="row mb-5">
         <h2 className="mb-3">
           <span className="badge bg-danger">{textSelect}</span>
