@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import Page from "./Page"
 
 const Fonts = ({valueSlider, text}) => {
    const [loading, setLoading] = useState(false)
@@ -28,6 +29,7 @@ const Fonts = ({valueSlider, text}) => {
       })
       .then((data) => {
         console.log(data)
+        //setFonts((p) => [...p, ...data.results])
         setLoading(false);
       })
       .catch((error) => {
@@ -44,7 +46,7 @@ const Fonts = ({valueSlider, text}) => {
         <article className="col-lg-6 mb-4">
 
           <div className="shadow-sm border p-3 h-100">
-            {/* {Fonts.map(())} */}
+            
             <h2 className="h6 d-flex aling-items-center justify-content-between"><span>Karantina</span><small>3 variant(s)</small></h2>
             <span className="badge bg-dark mb-4">DISPLAY</span>
 
