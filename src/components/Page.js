@@ -3,10 +3,12 @@ import Fonts from './Fonts'
 
 const Page = () => {
   return (
-    <div>
+    <div className="container min-vh-100">
       <div className="container">
-        <Inputs />
-        <Fonts />
+        <div class="row my-5">
+          <Inputs />
+          <Fonts />
+        </div>
       </div>
     </div>
   )

@@ -5,7 +5,7 @@ const Fonts = () => {
 
 
   return (
-    <div className="lg-9">
+    <div className="col-lg-9">
       <section className="row mb-5">
         <h2 class="mb-3"><span className="badge bg-danger">Les plus récentes</span></h2>
         <article className="col-lg-6 mb-4">
