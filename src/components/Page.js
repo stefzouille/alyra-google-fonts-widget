@@ -10,8 +10,8 @@ const Page = () => {
     <div className="container min-vh-100">
       <div className="container">
         <div className="row my-5">
-          <Inputs setValueSlider={setValueSlider} valueSlider={valueSlider} />
-          <Fonts valueSlider={valueSlider} />
+          <Inputs setValueSlider={setValueSlider} valueSlider={valueSlider} text={text} setText={setText} />
+          <Fonts valueSlider={valueSlider} text={text} />
         </div>
       </div>
     </div>
