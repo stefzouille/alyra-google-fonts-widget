@@ -1,4 +1,11 @@
+import {useState} from "react"
+
 const Inputs = () => {
+const [value, setValue] = useState("24")
+
+const handleChange = (event) => {
+  setValue(event.target.value)
+}
  
 return (
   <div className="col-lg-3 mb-4">
@@ -14,7 +21,7 @@ return (
           <textarea id="text" class="form-control">Portez ce vieux whisky au juge blond qui fume !? 0123456789</textarea>
         </div>
         <label htmlFor="range" class="form-label fw-bold mb-3">La taille de police</label>
-        <input type="range" className="form-range" min="8" max="48" step="1" value="33"></input>
+        <input onChange={handleChange} type="range" className="form-range" min="8" max="48" step="1" value={value}></input>
       </div>
   </div>
   )
