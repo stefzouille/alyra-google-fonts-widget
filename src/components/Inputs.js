@@ -1,5 +1,5 @@
 const Inputs = () => {
-
+ 
 return (
   <div className="col-lg-3 mb-4">
     <div style={{position: "sticky", top: 0}}>
@@ -14,7 +14,7 @@ return (
           <textarea id="text" class="form-control">Portez ce vieux whisky au juge blond qui fume !? 0123456789</textarea>
         </div>
         <label htmlFor="range" class="form-label fw-bold mb-3">La taille de police</label>
-        <input type="range" class="form-range" min="8" max="48" step="1" value="33"></input>
+        <input type="range" className="form-range" min="8" max="48" step="1" value="33"></input>
       </div>
   </div>
   )
