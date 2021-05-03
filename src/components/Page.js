@@ -5,8 +5,10 @@ const Page = () => {
   return (
     <>
       <div className="container">
-        <Inputs />
-        <Fonts />
+        <div className="row my-5">
+          <Inputs />
+          <Fonts />
+        </div>
       </div>
     </>
   )
