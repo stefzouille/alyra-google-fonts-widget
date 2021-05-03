@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Page from "./Page";
+
 
 const Fonts = ({ valueSlider, text, textSelect }) => {
   const [loading, setLoading] = useState(false);
@@ -36,7 +36,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
         setError("quelques chose c'est mal passé..");
         setLoading(false);
       });
-  }, []);
+  }, [error]);
 
   return (
     <div className="col-lg-9">
