@@ -37,7 +37,7 @@ const Fonts = ({valueSlider, text}) => {
         setError(error.message)
         setLoading(false);
       })
-  }, [])
+  }, [error])
 
   return (
     <div className="col-lg-9">
