@@ -25,7 +25,7 @@ export default class App extends React.Component {
     const { date } = this.state;
   
 
-    return <div className="text-center">{date}</div>;
+    return <div className="text-center text-danger fs-3">{date}</div>;
   }
 }
 
