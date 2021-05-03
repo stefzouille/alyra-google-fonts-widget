@@ -2,7 +2,12 @@ import Inputs from './Inputs'
 import Fonts from './Fonts'
 
 const Page = () => {
- return (<></>)
+ return (
+  <>
+  <Inputs />
+  <Fonts />
+  </>
+ )
 }
 
 export default Page
