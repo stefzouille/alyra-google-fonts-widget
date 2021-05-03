@@ -1,25 +1,23 @@
-import { useState, useEffect, useRef } from "react"
-import "bootstrap/dist/css/bootstrap.css"
-
+import { useEffect, useState } from "react"
 
 const Fonts = () => {
 
   useEffect(() => {
     fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM')
-    
-    .then((response) => {
-      console.log("j en suis la!!coucou!")
-    if (!response.ok) {
-      throw new Error("something went wrong")
-    }
-    return response.json()
-  })
-  .then((data) => {
-    console.log(data)
-  })
-  .catch((error) => {
-    console.error(error.message)
-  })
+
+      .then((response) => {
+        console.log("j en suis la!!coucou!")
+        if (!response.ok) {
+          throw new Error("something went wrong")
+        }
+        return response.json()
+      })
+      .then((data) => {
+        console.log(data)
+      })
+      .catch((error) => {
+        console.error(error.message)
+      })
   })
 
   return (
