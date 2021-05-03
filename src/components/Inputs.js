@@ -1,10 +1,9 @@
 import {useState} from "react"
 
-const Inputs = () => {
-const [value, setValue] = useState("24")
+const Inputs = ({setValueSlider, valueSlider}) => {
 
 const handleChange = (event) => {
-  setValue(event.target.value)
+  setValueSlider(event.target.value)
 }
  
 return (
@@ -21,7 +20,7 @@ return (
           <textarea id="text" className="form-control">Portez ce vieux whisky au juge blond qui fume !? 0123456789</textarea>
         </div>
         <label htmlFor="range" className="form-label fw-bold mb-3">La taille de police</label>
-        <input onChange={handleChange} type="range" className="form-range" min="8" max="48" step="1" value={value}></input>
+        <input onChange={handleChange} type="range" className="form-range" min="8" max="48" step="1" value={valueSlider}></input>
       </div>
   </div>
   )

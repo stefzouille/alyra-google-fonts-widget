@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-const Fonts = () => {
+const Fonts = ({valueSlider}) => {
 
   useEffect(() => {
     fetch('https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM')
@@ -32,7 +32,7 @@ const Fonts = () => {
             <span className="badge bg-dark mb-4">DISPLAY</span>
 
 
-            <p className="sample">Portez ce vieux whisky au juge blond qui fume !? 0123456789</p>
+            <p className="sample" style={{fontSize: `${valueSlider}px`}}>Portez ce vieux whisky au juge blond qui fume !? 0123456789</p>
 
             <a rel="noopener noreferrer" target="_blank" className="text-danger"
               href="https://fonts.google.com/specimen/Karantina">Voir sur Google Fonts (ouvre un nouveau tab)</a>
