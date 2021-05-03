@@ -1,15 +1,20 @@
 const Inputs = () => {
 
 return (
-  <div className="col-3">
-    <form>
-      <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" />
-        <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+  <div className="col-lg-3 mb-4">
+    <div style={{position: "sticky", top: 0}}>
+        <label htmlFor="sort" class="fw-bold mb-2">Afficher des polices</label>
+        <select id="sort" class="form-select mb-4">
+          <option value="date">Les 10 plus récentes</option>
+          <option value="popularity">Les 10 plus populaires</option>
+          <option value="trending">Top 10 trendings</option>
+        </select>
+        <div class="mb-3">
+          <label htmlFor="text" class="form-label fw-bold mb-3">Tapez votre text</label>
+        </div>
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
+        
         <input type="password" class="form-control" id="exampleInputPassword1" />
       </div>
       <div class="mb-3 form-check">
@@ -17,7 +22,6 @@ return (
         <label class="form-check-label" for="exampleCheck1">Check me out</label>
       </div>
       <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
   </div>
   )
 }
