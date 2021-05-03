@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import Page from "./Page"
+
 
 const Fonts = ({valueSlider}) => {
   // const [fonts, setFonts] = useState([])
