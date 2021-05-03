@@ -3,12 +3,12 @@ import Fonts from './Fonts'
 
 const Page = () => {
   return (
-    <>
+    <div>
       <div className="container">
         <Inputs />
         <Fonts />
       </div>
-    </>
+    </div>
   )
 }
 
