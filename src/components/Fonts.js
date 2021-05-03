@@ -10,7 +10,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     setError("");
 
     fetch(
-      "https://www.gooogleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
+      "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
         console.log("j'en suis la!!coucou!");
@@ -33,14 +33,14 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
       })
       .catch((error) => {
         console.error(error.message);
-        setError(error.message);
+        setError("quelques chose c'est mal passé..");
         setLoading(false);
       });
   }, []);
 
   return (
     <div className="col-lg-9">
-        {loading && <p className="text-center">loading...</p>}
+        {loading && <p className="text-center">loading mode wait please...</p>}
       {!!error && <p className="alert alert-danger">{error}</p>}
       <section className="row mb-5">
         <h2 className="mb-3">
