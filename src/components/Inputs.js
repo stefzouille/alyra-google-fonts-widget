@@ -1,5 +1,3 @@
-import {useState} from "react"
-
 const Inputs = ({setValueSlider, valueSlider}) => {
 
 const handleChange = (event) => {
