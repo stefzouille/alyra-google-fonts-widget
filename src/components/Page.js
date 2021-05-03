@@ -6,7 +6,7 @@ const Page = () => {
   const [valueSlider, setValueSlider] = useState("24");
   const [text, setText] = useState(
     "Portez ce vieux whisky au juge blond qui fume !? 0123456789"
-  );
+  )
   const [textSelect, setTextSelect] = useState();
 
   return (

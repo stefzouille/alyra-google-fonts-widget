@@ -37,11 +37,14 @@ const Inputs = ({
           <label htmlFor="text" className="form-label fw-bold mb-3">
             Tapez votre text
           </label>
+
+        {/* //attention le warning vient de ICI text area !!!! */}
           <textarea
             onChange={handleTextChange}
             id="text"
             className="form-control"
-          >
+            >
+     {/* hmm obligé de descendre text en dehors de textarea ??? le usetex de page.js pose souci??     */}
             {text}
           </textarea>
         </div>
