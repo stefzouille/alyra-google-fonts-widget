@@ -5,7 +5,7 @@ const Fonts = () => {
 
 
   return (
-    <div className=" container lg-">
+    <div className=" container lg-9">
       <section className="row mb-5">
         <h2 class="mb-3"><span className="badge bg-danger">Les plus récentes</span></h2>
         <article className="col-lg-6 mb-4">
@@ -18,9 +18,9 @@ const Fonts = () => {
 
             <p className="sample">Portez ce vieux whisky au juge blond qui fume !? 0123456789</p>
 
-            <a rel="noopener noreferrer" target="_blank" className="text-danger" 
-            href="https://fonts.google.com/specimen/Karantina">Voir sur Google Fonts (ouvre un nouveau tab)</a>
-            
+            <a rel="noopener noreferrer" target="_blank" className="text-danger"
+              href="https://fonts.google.com/specimen/Karantina">Voir sur Google Fonts (ouvre un nouveau tab)</a>
+
           </div>
 
         </article>

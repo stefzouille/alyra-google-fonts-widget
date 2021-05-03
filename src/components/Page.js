@@ -2,12 +2,14 @@ import Inputs from './Inputs'
 import Fonts from './Fonts'
 
 const Page = () => {
- return (
-  <>
-  <Inputs />
-  <Fonts />
-  </>
- )
+  return (
+    <>
+      <div className="container">
+        <Inputs />
+        <Fonts />
+      </div>
+    </>
+  )
 }
 
 export default Page
