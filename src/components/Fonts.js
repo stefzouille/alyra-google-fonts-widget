@@ -10,7 +10,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     setError("");
 
     fetch(
-      "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
+      "https://www.gooogleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
         console.log("j'en suis la!!coucou!");
@@ -20,7 +20,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
       })
       .then((response) => {
         if (!response.ok) {
-          throw new Error(
+          throw new error(
             `Nous n'avons pas pu lire le registre , status : ${response.status}`
           );
         }
@@ -40,7 +40,8 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
 
   return (
     <div className="col-lg-9">
-
+        {loading && <p className="text-center">loading...</p>}
+      {!!error && <p className="alert alert-danger">{error}</p>}
       <section className="row mb-5">
         <h2 className="mb-3">
           <span className="badge bg-danger">{textSelect}</span>
