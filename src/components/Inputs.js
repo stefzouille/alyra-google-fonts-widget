@@ -38,15 +38,12 @@ const Inputs = ({
             Tapez votre text
           </label>
 
-{/*------- //attention le warning vient de ICI text area !!!! */}
           <textarea
             onChange={handleTextChange}
             id="text"
             className="form-control"
             value={text}
             >
-{/*------- hmm obligé de descendre text en dehors de textarea ??? le useState de texte de page.js pose souci??     */}
-            
           </textarea>
         </div>
 
