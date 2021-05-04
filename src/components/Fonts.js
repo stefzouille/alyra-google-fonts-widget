@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 
-const Fonts = ({ valueSlider, text, textSelect }) => {
+const Fonts = ({ valueSlider, text, sort }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -12,7 +12,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     fetch(
       // a voir comment placer la key api du dossier event.local
       // ${process.env.REACT_APP_WEATHER_API_KEY}
-      `https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
+      //`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
       // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
@@ -47,7 +47,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
       {!!error && <p className="alert alert-danger">{error}</p>}
       <section className="row mb-5">
         <h2 className="mb-3">
-          <span className="badge bg-danger">{textSelect}</span>
+          <span className="badge bg-danger">{sort}</span>
           
         </h2>
         <article className="col-lg-6 mb-4">
