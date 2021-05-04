@@ -9,6 +9,7 @@ export default class App extends React.Component {
    
   };
 
+  
   componentDidMount() {
     this.getDate();
     
@@ -18,6 +19,7 @@ export default class App extends React.Component {
   getDate = () => {
     var date = new Date().toLocaleString()
     this.setState({ date });
+    window.setInterval(() => this.getDate(), 1000)
   };
   
 
@@ -27,6 +29,9 @@ export default class App extends React.Component {
 
     return <div className="text-center text-danger fs-3">{date}</div>;
   }
+  
 }
+
+
 
 
