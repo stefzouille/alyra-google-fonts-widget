@@ -3,8 +3,8 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 
 const Fonts = ({ valueSlider, text, sort }) => {
-  // const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
 //tets pull
   // useEffect(() => {
   //   setLoading(true);
