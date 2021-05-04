@@ -5,43 +5,43 @@ import GoogleFontLoader from 'react-google-font-loader';
 const Fonts = ({ valueSlider, text, sort, data }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+//tets pull
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setError("");
 
-  useEffect(() => {
-    setLoading(true);
-    setError("");
+  //   fetch("Page"
+  //     // a voir comment placer la key api du dossier event.local
+  //     // ${process.env.REACT_APP_WEATHER_API_KEY}
+  //     //`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
+  //     // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
+  //   )
+  //     .then((response) => {
+  //       console.log("j'en suis la!!coucou!");
+  //       return new Promise((resolved) => {
+  //         setTimeout(() => resolved(response), 2000);
+  //       });
+  //     })
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new error(
+  //           `Nous n'avons pas pu lire le registre , status : ${response.status}`
+  //         );
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => {
+  //       console.log(data);
+  //       //setFonts((p) => [...p, ...data.results])
+  //       setLoading(false);
+  //     })
+  //     .catch((error) => {
+  //       console.error(error.message);
+  //       setError("Quelques chose s'est mal passé..");
+  //       setLoading(false);
+  //     });
+  // }, []);
 
-    fetch(
-      // a voir comment placer la key api du dossier event.local
-      // ${process.env.REACT_APP_WEATHER_API_KEY}
-      //`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
-      // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
-    )
-      .then((response) => {
-        console.log("j'en suis la!!coucou!");
-        return new Promise((resolved) => {
-          setTimeout(() => resolved(response), 2000);
-        });
-      })
-      .then((response) => {
-        if (!response.ok) {
-          throw new error(
-            `Nous n'avons pas pu lire le registre , status : ${response.status}`
-          );
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log(data);
-        //setFonts((p) => [...p, ...data.results])
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error(error.message);
-        setError("quelques chose c'est mal passé..");
-        setLoading(false);
-      });
-  }, []);
-//alos la
   return (
     
     <div className="col-lg-9">
