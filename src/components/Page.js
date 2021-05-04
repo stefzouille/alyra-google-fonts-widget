@@ -26,8 +26,7 @@ const Page = () => {
   }, [sort])
 
   return (
-    <div className="container min-vh-100">
-      <div className="container">
+    <div className="container ">
         <div className="row my-5">
           <Inputs
             setValueSlider={setValueSlider}
@@ -36,14 +35,15 @@ const Page = () => {
             text={text}
             setText={setText}
           />
-        
-        {data.map((elem) => {
-           return <Fonts font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
-          })
-        }
+          <h2 className="mb-3 col-9">
+            <span className="badge bg-danger">{sort}</span>
+          </h2>
+          {data.map((elem) => {
+             return <Fonts font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
+            })
+          }
         </div>
       </div>
-    </div>
   );
 };
 

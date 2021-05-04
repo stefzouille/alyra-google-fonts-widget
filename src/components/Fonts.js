@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import GoogleFontLoader from 'react-google-font-loader'; 
 
 
-const Fonts = ({ valueSlider, text, sort, data }) => {
+const Fonts = ({ valueSlider, text, sort, font }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 //tets pull
@@ -45,14 +45,10 @@ const Fonts = ({ valueSlider, text, sort, data }) => {
   return (
     
     <div className="col-lg-9">
-      
-        {loading && <p className="text-center">loading mode wait please...</p>}
+      {loading && <p className="text-center">loading mode wait please...</p>}
       {!!error && <p className="alert alert-danger">{error}</p>}
-      <section className="row mb-5">
-        <h2 className="mb-3">
-          <span className="badge bg-danger">{sort}</span>
-          
-        </h2>
+      <div className="row mb-5">
+        
         <article className="col-lg-6 mb-4">
           <div className="shadow-sm border p-3 h-100">
             <h2 className="h6 d-flex aling-items-center justify-content-between">
@@ -75,7 +71,7 @@ const Fonts = ({ valueSlider, text, sort, data }) => {
             </a>
           </div>
         </article>
-      </section>
+      </div>
     </div>
   );
 };
