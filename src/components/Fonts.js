@@ -12,11 +12,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     fetch(
       // a voir comment placer la key api du dossier event.local
       // ${process.env.REACT_APP_WEATHER_API_KEY}
-<<<<<<< HEAD
-      `https://www.gooogleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
-=======
-      `https://www.googleapis.com/webfonts/v1/webfonts?/key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
->>>>>>> 8cfbb62713e7c4611483452e51a00336dc4cd6dd
+      `https://www.googleapis.com/webfonts/v1/webfonts?sort=popularity&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
       // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
