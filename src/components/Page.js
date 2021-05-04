@@ -1,26 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Inputs from "./Inputs";
 import Fonts from "./Fonts";
 
 const Page = () => {
   const [valueSlider, setValueSlider] = useState("24");
   const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789")
-  const [textSelect, setTextSelect] = useState("les 10 plus recentes");
-  
+  const [sort, setSort] = useState("date")
+  const [data, setData] = useState([])
+  console.log(data)
+
+  useEffect(() => {
+    fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`)
+    .then((response) => {
+        if(!response.ok) {
+          throw new Error(`impossible de lire les Fonts ${response.status}`)
+        }
+        return response.json()
+    })
+    .then((data) => {
+      setData(data.items.slice(0,10))
+    })
+    .catch((error) => {
+      console.error(error.message)
+    })
+  }, [sort])
+
   return (
     <div className="container min-vh-100">
       <div className="container">
         <div className="row my-5">
           <Inputs
             setValueSlider={setValueSlider}
-            textSelect={textSelect}
-            setTextSelect={setTextSelect}
+            setSort={setSort}
             valueSlider={valueSlider}
             text={text}
             setText={setText}
           />
 
-          <Fonts textSelect={textSelect}  valueSlider={valueSlider} text={text} />
+          <Fonts data={data}  sort={sort}  valueSlider={valueSlider} text={text} />
         </div>
       </div>
     </div>
