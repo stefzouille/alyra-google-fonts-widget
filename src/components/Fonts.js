@@ -6,7 +6,7 @@ const Fonts = ({ valueSlider, text, sort, font }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const link = `https://fonts.google.com/specimen/${font.family}`
-//tets pull
+  //tets pull
   // useEffect(() => {
   //   setLoading(true);
   //   setError("");
@@ -53,7 +53,7 @@ const Fonts = ({ valueSlider, text, sort, font }) => {
             <small>{font.variants.length} variant(s)</small>
           </h2>
           <span className="badge bg-dark mb-4">{font.category}</span>
-          <GoogleFontLoader fonts={[{font:`${font.family}`, weights: [300,700]}]} subsets={['cyrillic-ext', 'greek']}
+          <GoogleFontLoader fonts={[{font:`${font.family}`, weights: [300,700]}]} subsets={font.subsets}
           />
           <p className="sample" style={{fontFamily: `${font.family}`, fontSize: `${valueSlider}px`}}>
             {text}
