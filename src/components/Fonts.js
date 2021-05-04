@@ -11,7 +11,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
 
     fetch(
       // a voir comment placer la key api du dossier event.local
-      // process.env.REACT_APP_WEATHER_API_KEY
+      // ${process.env.REACT_APP_WEATHER_API_KEY}
       `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
       // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
