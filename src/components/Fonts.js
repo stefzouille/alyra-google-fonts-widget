@@ -40,7 +40,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
         setLoading(false);
       });
   }, []);
-
+//alos la
   return (
     <div className="col-lg-9">
         {loading && <p className="text-center">loading mode wait please...</p>}
