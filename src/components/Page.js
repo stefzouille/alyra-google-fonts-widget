@@ -36,8 +36,11 @@ const Page = () => {
             text={text}
             setText={setText}
           />
-
-          <Fonts data={data}  sort={sort}  valueSlider={valueSlider} text={text} />
+        
+        {data.map((elem) => {
+           return <Fonts font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
+          })
+        }
         </div>
       </div>
     </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import GoogleFontLoader from 'react-google-font-loader'; 
 
 
-const Fonts = ({ valueSlider, text, sort }) => {
+const Fonts = ({ valueSlider, text, sort, data }) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -43,7 +43,9 @@ const Fonts = ({ valueSlider, text, sort }) => {
   }, []);
 //alos la
   return (
+    
     <div className="col-lg-9">
+      
         {loading && <p className="text-center">loading mode wait please...</p>}
       {!!error && <p className="alert alert-danger">{error}</p>}
       <section className="row mb-5">
