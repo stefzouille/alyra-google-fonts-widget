@@ -26,24 +26,26 @@ const Page = () => {
   }, [sort])
 
   return (
-    <div className="container ">
-        <div className="row my-5">
-          <Inputs
-            setValueSlider={setValueSlider}
-            setSort={setSort}
-            valueSlider={valueSlider}
-            text={text}
-            setText={setText}
-          />
-          <h2 className="mb-3 col-9">
-            <span className="badge bg-danger">{sort}</span>
-          </h2>
-          {data.map((elem) => {
-             return <Fonts font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
-            })
-          }
-        </div>
+    <div className="container min-vh-100">
+      <div className="row my-5">
+        <Inputs
+          setValueSlider={setValueSlider}
+          setSort={setSort}
+          valueSlider={valueSlider}
+          text={text}
+          setText={setText}
+        />
+        <div className="col-lg-9">
+          <section className="row mb-5">
+            <h2 className="mb-3 col-9"><span className="badge bg-danger">{sort}</span></h2>
+            {data.map((elem) => {
+              return <Fonts key={elem.family} font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
+              })
+            }
+          </section>
+        </div>  
       </div>
+    </div>
   );
 };
 
