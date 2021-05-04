@@ -43,9 +43,10 @@ const Inputs = ({
             onChange={handleTextChange}
             id="text"
             className="form-control"
+            value={text}
             >
 {/*------- hmm obligé de descendre text en dehors de textarea ??? le useState de texte de page.js pose souci??     */}
-            {text}
+            
           </textarea>
         </div>
 
