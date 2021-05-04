@@ -48,6 +48,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
       <section className="row mb-5">
         <h2 className="mb-3">
           <span className="badge bg-danger">{textSelect}</span>
+          
         </h2>
         <article className="col-lg-6 mb-4">
           <div className="shadow-sm border p-3 h-100">

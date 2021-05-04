@@ -4,24 +4,23 @@ import Fonts from "./Fonts";
 
 const Page = () => {
   const [valueSlider, setValueSlider] = useState("24");
-  const [text, setText] = useState(
-    "Portez ce vieux whisky au juge blond qui fume !? 0123456789"
-  )
-  const [textSelect, setTextSelect] = useState();
-
+  const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789")
+  const [textSelect, setTextSelect] = useState("les 10 plus recentes");
+  console.log(textSelect)
   return (
     <div className="container min-vh-100">
       <div className="container">
         <div className="row my-5">
           <Inputs
             setValueSlider={setValueSlider}
+            textSelect={textSelect}
             setTextSelect={setTextSelect}
             valueSlider={valueSlider}
             text={text}
             setText={setText}
           />
 
-          <Fonts valueSlider={valueSlider} text={text} />
+          <Fonts textSelect={textSelect}  valueSlider={valueSlider} text={text} />
         </div>
       </div>
     </div>

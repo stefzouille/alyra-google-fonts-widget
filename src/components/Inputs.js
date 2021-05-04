@@ -4,6 +4,7 @@ const Inputs = ({
   text,
   setText,
   setTextSelect,
+
 }) => {
   const handleChange = (event) => {
     setValueSlider(event.target.value);
@@ -28,9 +29,9 @@ const Inputs = ({
           className="form-select mb-4"
           onChange={handleSelectChange}
         >
-          <option value="date">Les 10 plus récentes</option>
-          <option value="popularity">Les 10 plus populaires</option>
-          <option value="trending">Top 10 trendings</option>
+          <option value="Les 10 plus récentes">Les 10 plus récentes</option>
+          <option value="Les 10 plus populaires">Les 10 plus populaires</option>
+          <option value="Top 10 trendings">Top 10 trendings</option>
         </select>
 
         <div className="mb-3">
