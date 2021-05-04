@@ -3,8 +3,8 @@ import Page from './Page'
 
 
 const Fonts = ({ valueSlider, text, sort }) => {
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState("");
 
   // useEffect(() => {
   //   setLoading(true);
