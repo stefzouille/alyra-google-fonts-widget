@@ -10,6 +10,8 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     setError("");
 
     fetch(
+      // a voir comment placer la key api du dossier event.local
+      // process.env.REACT_APP_WEATHER_API_KEY
       "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
