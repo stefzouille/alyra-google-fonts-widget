@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Page from './Page'
+import GoogleFontLoader from 'react-google-font-loader'; 
 
 
 const Fonts = ({ valueSlider, text, sort }) => {
