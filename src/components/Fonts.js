@@ -12,7 +12,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
     fetch(
       // a voir comment placer la key api du dossier event.local
       // ${process.env.REACT_APP_WEATHER_API_KEY}
-      `https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
+      `https://www.gooogleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
       // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
     )
       .then((response) => {
@@ -39,7 +39,7 @@ const Fonts = ({ valueSlider, text, textSelect }) => {
         setError("quelques chose c'est mal passé..");
         setLoading(false);
       });
-  }, [error]);
+  }, []);
 
   return (
     <div className="col-lg-9">
