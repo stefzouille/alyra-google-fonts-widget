@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import GoogleFontLoader from 'react-google-font-loader'; 
+// import { useEffect, useState } from "react";
+// import GoogleFontLoader from 'react-google-font-loader'; 
 
 
 const Fonts = ({ valueSlider, text, sort, font }) => {
