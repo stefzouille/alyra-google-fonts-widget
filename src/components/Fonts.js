@@ -3,7 +3,6 @@ import GoogleFontLoader from 'react-google-font-loader';
 
 
 const Fonts = ({ valueSlider, text, sort, font }) => {
-<<<<<<< HEAD
 
  return (
     
@@ -15,65 +14,11 @@ const Fonts = ({ valueSlider, text, sort, font }) => {
               <small>3 variant(s)</small>
             </h2>
             <span className="badge bg-dark mb-4">DISPLAY</span>
-=======
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState("");
-  const link = `https://fonts.google.com/specimen/${font.family}`
-  //tets pull
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setError("");
 
-  //   fetch("Page"
-  //     // a voir comment placer la key api du dossier event.local
-  //     // ${process.env.REACT_APP_WEATHER_API_KEY}
-  //     //`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`
-  //     // url qui marche d origine "https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM"
-  //   )
-  //     .then((response) => {
-  //       console.log("j'en suis la!!coucou!");
-  //       return new Promise((resolved) => {
-  //         setTimeout(() => resolved(response), 2000);
-  //       });
-  //     })
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new error(
-  //           `Nous n'avons pas pu lire le registre , status : ${response.status}`
-  //         );
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => {
-  //       console.log(data);
-  //       //setFonts((p) => [...p, ...data.results])
-  //       setLoading(false);
-  //     })
-  //     .catch((error) => {
-  //       console.error(error.message);
-  //       setError("Quelques chose s'est mal passé..");
-  //       setLoading(false);
-  //     });
-  // }, []);
+            <p className="sample" style={{ fontSize: `${valueSlider}px` }}>
+              {text}
+            </p>
 
-  return (
->>>>>>> 4da91b22de24122115784cac0f26152b371c1f57
-
-      <article className="col-lg-6 mb-4">
-       
-        <div className="shadow-sm border p-3 h-100">
-          <h2 className="h6 d-flex aling-items-center justify-content-between">
-            <span>{font.family}</span>
-            <small>{font.variants.length} variant(s)</small>
-          </h2>
-          <span className="badge bg-dark mb-4">{font.category}</span>
-          <GoogleFontLoader fonts={[{font:`${font.family}`, weights: [300,700]}]} subsets={font.subsets}
-          />
-          <p className="sample" style={{fontFamily: `${font.family}`, fontSize: `${valueSlider}px`}}>
-            {text}
-          </p>
-
-<<<<<<< HEAD
             <a
               rel="noopener noreferrer"
               target="_blank"
@@ -86,18 +31,6 @@ const Fonts = ({ valueSlider, text, sort, font }) => {
         </article>
       </div>
    
-=======
-          <a
-            rel="noopener noreferrer"
-            target="_blank"
-            className="text-danger"
-            href={link}
-          >
-            Voir sur Google Fonts (ouvre un nouveau tab)
-          </a>
-        </div>
-      </article>
->>>>>>> 4da91b22de24122115784cac0f26152b371c1f57
   );
 };
 
