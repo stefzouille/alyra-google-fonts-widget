@@ -20,6 +20,7 @@ const Fonts = ({ valueSlider, text, font }) => {
             <span>{font.family}</span>
             <small>{font.variants.length} variant(s)</small>
           </h2>
+          
           <span className="badge bg-dark mb-4">{font.category}</span>
           <GoogleFontLoader fonts={[{font: font.family}]} />
           <p className="sample" style={{fontFamily: font.family, fontSize: `${valueSlider}px`}}>

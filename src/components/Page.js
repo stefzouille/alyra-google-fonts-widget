@@ -8,6 +8,18 @@ const Page = () => {
   const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789")
   const [sort, setSort] = useState("date")
   const [data, setData] = useState([])
+  const spanText = (sort) => {
+    switch(sort) {
+      case "date":
+        return "Les 10 plus récentes"
+      case "popularity":
+        return "Les 10 plus populaires"
+      case 'trending': 
+        return "Top 10 trendings"
+      default:
+        return "ça bug !"
+    }
+  }
 
   useEffect(() => {
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`)
@@ -37,7 +49,7 @@ const Page = () => {
         />
         <div className="col-lg-9">
           <section className="row mb-5">
-            <h2 className="mb-3 col-9"><span className="badge bg-danger">{sort}</span></h2>
+            <h2 className="mb-3 col-9"><span className="badge bg-danger">{spanText(sort)}</span></h2>
             {data.map((elem) => {
               return <Fonts key={elem.family} font={elem}  sort={sort} valueSlider={valueSlider} text={text} />
               })

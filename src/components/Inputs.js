@@ -4,7 +4,6 @@ const Inputs = ({
   text,
   setText,
   setSort,
-  data
 }) => {
   const handleChange = (event) => {
     setValueSlider(event.target.value);
