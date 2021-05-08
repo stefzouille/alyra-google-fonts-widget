@@ -9,7 +9,7 @@ import Time from './components/Time'
 function App() {
   return (
     <div className="App">
-      
+       
       <Header />
       <Time />
       <Page />

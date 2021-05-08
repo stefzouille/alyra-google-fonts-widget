@@ -2,12 +2,12 @@ import { useEffect, useState } from "react";
 import Inputs from "./Inputs";
 import Fonts from "./Fonts";
 
+
 const Page = () => {
   const [valueSlider, setValueSlider] = useState("24");
   const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789")
   const [sort, setSort] = useState("date")
   const [data, setData] = useState([])
-  console.log(data)
 
   useEffect(() => {
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`)
