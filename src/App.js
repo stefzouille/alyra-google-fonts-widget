@@ -11,7 +11,6 @@ function App() {
     <div className="App">
       
       <Header />
-      <Time />
       <Page />
       <footer className="p-3 text-center bg-dark text-white">With Love &amp; React for Alyra</footer>
     </div>
