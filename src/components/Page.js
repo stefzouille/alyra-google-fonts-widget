@@ -16,15 +16,20 @@ const Page = () => {
     setError("");
 
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`)
-    .then((response) => {
-        if(!response.ok) {
-          throw new Error(`impossible de lire les Fonts ${response.status}`)
+      .then((response) => {
+        return new Promise((resolved) => {
+          setTimeout(() => resolved(response), 1000);
+        });
+      })
+      .then((response) => {
+        if (!response.ok) {
+          throw new error(`impossible de lire les Fonts ${response.status}`)
         }
-        return response.json()
-    })
+        return response.json();
+      })
     .then((data) => {
       setData(data.items.slice(0,10))
-      setLoading(false);
+      setLoading(true);
     })
     .catch((error) => {
       console.error(error.message)
