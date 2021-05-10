@@ -23,7 +23,8 @@ const Fonts = ({ valueSlider, text, font }) => {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            className="box fs-3"
+            className="fs-4"
+            style={{color: "red"}}
             href={link}
           >
             Voir sur Google Fonts (ouvre un nouveau tab)
