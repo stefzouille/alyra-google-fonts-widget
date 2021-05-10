@@ -1,3 +1,6 @@
+import './Box.css'
+import img from './Tothemoon.jpg'
+
 const Inputs = ({
   setValueSlider,
   valueSlider,
@@ -18,8 +21,8 @@ const Inputs = ({
   };
 
   return (
-    <div className="col-lg-3 mb-4">
-      <div style={{ position: "sticky", top: 0 }}>
+    <div className="col-lg-3 mb-4 ">
+      <div className="Box" style={{ position: "sticky", top: 0 }}>
         <label htmlFor="sort" className="fw-bold mb-2">
           Afficher des polices
         </label>
@@ -60,6 +63,7 @@ const Inputs = ({
           step="1"
           value={valueSlider}
         ></input>
+        <img className="photo mt-5" src={img}/>
       </div>
     </div>
   );
