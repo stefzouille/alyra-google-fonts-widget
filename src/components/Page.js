@@ -32,7 +32,7 @@ const Page = () => {
       .then((response) => {
         return new Promise((resolved) => {
           // setTimeout(() => resolved(response), 200);
-        // });
+        });
       })
       .then((response) => {
         if (!response.ok) {
