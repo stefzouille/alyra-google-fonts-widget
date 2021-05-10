@@ -10,7 +10,7 @@ const Page = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
-  
+
   const spanText = (sort) => {
     switch(sort) {
       case "date":
@@ -31,7 +31,7 @@ const Page = () => {
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=${process.env.REACT_APP_SECRET_NAME}`)
       .then((response) => {
         return new Promise((resolved) => {
-          setTimeout(() => resolved(response), 1000);
+          // setTimeout(() => resolved(response), 200);
         });
       })
       .then((response) => {
