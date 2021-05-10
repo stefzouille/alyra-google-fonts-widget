@@ -23,7 +23,7 @@ const Fonts = ({ valueSlider, text, font }) => {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            className="text-danger fs-3"
+            className="box fs-3"
             href={link}
           >
             Voir sur Google Fonts (ouvre un nouveau tab)
