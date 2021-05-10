@@ -3,19 +3,8 @@ import Page from './components/Page'
 import Header from './components/Header'
 import DateTime from './components/Time'
 import './components/Box.css'
+import ToggleModeButton from './components/ToggleModeButton'
 
-
-const ToggleModeButton = (props) => {
-  const { darkMode, setDarkMode } = props;
-  const handleButtonClick = () => {
-    setDarkMode(!darkMode);
-  };
-  return (
-    <button onClick={handleButtonClick} className="btn btn-danger mb-4">
-      Dark Mode
-    </button>
-  );
-};
 
 
 function App() {
