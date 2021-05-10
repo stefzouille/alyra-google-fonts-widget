@@ -5,7 +5,7 @@ export const DateTime = () => {
     let [date,setDate] = useState(new Date());
     
     useEffect(() => {
-        var timer = setInterval(()=>setDate(new Date()), 1000 )
+        let timer = setInterval(()=>setDate(new Date()), 1000 )
         return function cleanup() {
             clearInterval(timer)
         }
