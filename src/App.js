@@ -24,14 +24,14 @@ function App() {
 
   return (
     <section className={modeClasses}>
+      <Header />
     <div className="App container">
        
-      <Header />
       <DateTime />
       <ToggleModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
       <Page />
-      <footer className="p-3 text-center bg-dark text-white">With Love &amp; React for Alyra</footer>
     </div>
+      <footer className="p-3 text-center bg-dark text-white">With Love &amp; React for Alyra</footer>
     </section>
   );
 }
