@@ -41,14 +41,14 @@ const Page = () => {
       })
     .then((data) => {
       setData(data.items.slice(0,10))
-      setLoading(true);
+      setLoading(false);
     })
     .catch((error) => {
       console.error(error.message)
       setError(error.message)
       setLoading(false);
     })
-  }, [sort])
+  }, [sort, error])
 
   return (
     <div className="container min-vh-100">
