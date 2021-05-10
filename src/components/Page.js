@@ -27,7 +27,8 @@ const Page = () => {
   useEffect(() => {
   setLoading(false);
     setError("");
-
+// rajout de l api vu que l on passe par .env.local sinon ca fonctionnera pas:
+//REACT_APP_SECRET_NAME=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=${process.env.REACT_APP_SECRET_NAME}`)
       
       .then((response) => {
