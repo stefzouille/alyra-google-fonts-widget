@@ -27,7 +27,7 @@ const Page = () => {
   setLoading(true);
     setError("");
 
-    fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=AIzaSyBQmtaFj1OaYmkjj8Qwo9uYKblF61wxjQM`)
+    fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=${process.env.REACT_APP_SECRET_NAME}`)
       .then((response) => {
         return new Promise((resolved) => {
           setTimeout(() => resolved(response), 1000);
