@@ -1,15 +1,9 @@
- //import { useEffect, useState } from "react";
-
 import GoogleFontLoader from "react-google-font-loader"
 
 const Fonts = ({ valueSlider, text, font }) => {
-  // const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState("");
+
   const link = `https://fonts.google.com/specimen/${font.family}`
-  //tets pull
-  // useEffect(() => {
-  //   setLoading(true);
-  //   setError("");
+
 
  return (
       <article className="col-lg-6 mb-4">
@@ -29,7 +23,7 @@ const Fonts = ({ valueSlider, text, font }) => {
           <a
             rel="noopener noreferrer"
             target="_blank"
-            className="text-danger"
+            className="text-danger fs-3"
             href={link}
           >
             Voir sur Google Fonts (ouvre un nouveau tab)
