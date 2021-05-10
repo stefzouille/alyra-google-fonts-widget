@@ -14,8 +14,8 @@ function App() {
   return (
     <section className={modeClasses}>
 
-      <Header />
 
+      <Header />
       <div className="App container">
         <div className="row">
           <div className="col-6 ps-4 pt-2">
