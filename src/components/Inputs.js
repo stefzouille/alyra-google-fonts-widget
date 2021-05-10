@@ -47,7 +47,7 @@ const Inputs = ({
           </textarea>
         </div>
 
-        <label htmlFor="range" className="form-label fw-bold mb-3">
+        <label type="range" className="form-label fw-bold mb-3">
           La taille de police
         </label>
         <input
