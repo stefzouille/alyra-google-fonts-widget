@@ -5,7 +5,7 @@ import Fonts from "./Fonts";
 
 const Page = () => {
   const [valueSlider, setValueSlider] = useState("24");
-  const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0123456789")
+  const [text, setText] = useState("Portez ce vieux whisky au juge blond qui fume !? 0 1 2 3 4 5 6 7 8 9")
   const [sort, setSort] = useState("date")
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
