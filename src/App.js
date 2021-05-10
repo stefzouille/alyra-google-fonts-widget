@@ -1,8 +1,8 @@
-
 import React from "react"
 import Page from './components/Page'
 import Header from './components/Header'
 import DateTime from './components/Time'
+import './components/Box.css'
 
 
 const ToggleModeButton = (props) => {
@@ -31,7 +31,9 @@ function App() {
       <ToggleModeButton darkMode={darkMode} setDarkMode={setDarkMode} />
       <Page />
     </div>
-      <footer className="p-3 text-center bg-dark text-white">With Love &amp; React for Alyra</footer>
+    <div className="Box">
+      <footer className="p-3 text-center">With Love &amp; React for Alyra</footer>
+      </div>
     </section>
   );
 }
