@@ -25,7 +25,7 @@ const Page = () => {
   }
 
   useEffect(() => {
-  setLoading(true);
+  setLoading(false);
     setError("");
 
     fetch(`https://www.googleapis.com/webfonts/v1/webfonts?sort=${sort}&key=${process.env.REACT_APP_SECRET_NAME}`)
