@@ -63,7 +63,7 @@ const Inputs = ({
           step="1"
           value={valueSlider}
         ></input>
-        <img className="col-12 col-md-10 col-xl-12 photo mt-5 " src={img} alt={"to the moon"}/>
+        <img className="col-12 col-md-8 col-xl-12 photo mt-5 " src={img} alt={"to the moon"}/>
       </div>
     </div>
   );
