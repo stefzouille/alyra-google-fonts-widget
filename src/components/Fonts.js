@@ -12,9 +12,8 @@ const Fonts = ({ valueSlider, text, font }) => {
   //   setError("");
 
  return (
-    
       <article className="col-lg-6 mb-4">
-       
+        
         <div className="shadow-sm border p-3 h-100">
           <h2 className="h6 d-flex aling-items-center justify-content-between">
             <span>{font.family}</span>
