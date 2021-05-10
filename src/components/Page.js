@@ -10,7 +10,8 @@ const Page = () => {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState("")
-   const spanText = (sort) => {
+  
+  const spanText = (sort) => {
     switch(sort) {
       case "date":
         return "Les 10 plus récentes"
