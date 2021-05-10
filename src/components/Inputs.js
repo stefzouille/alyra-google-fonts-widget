@@ -53,6 +53,7 @@ const Inputs = ({
         <input
           onChange={handleChange}
           type="range"
+          name="range"
           className="form-range"
           min="8"
           max="48"
